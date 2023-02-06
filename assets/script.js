@@ -17,6 +17,17 @@ function init() {
   interval = setInterval(watch, 1000);
 }
 
+function pause() {
+  clearInterval(interval);
+}
+
+function stop() {
+  clearInterval(interval);
+  seconds = 0;
+  minutes = 0;
+  watchDocument.innerHTML = "00:00:00";
+}
+
 function watch() {
   seconds++;
 
